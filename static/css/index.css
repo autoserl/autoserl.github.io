@@ -155,3 +155,109 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.experiment-table-container {
+  overflow-x: auto;
+}
+
+.experiment-container {
+  max-width: 1400px;
+  width: 100%;
+}
+
+.success-rate-table {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.experiment-subsection {
+  margin-top: 2.5rem;
+}
+
+.experiment-figure {
+  width: 100%;
+  height: auto;
+}
+
+.experiment-media-row {
+  margin-bottom: 1.5rem;
+}
+
+.experiment-subsection .title.is-4 {
+  margin-bottom: 1rem;
+}
+
+.experiment-table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  min-width: 1200px;
+}
+
+.experiment-table th,
+.experiment-table td {
+  vertical-align: top;
+  border: 1px solid #dbdbdb;
+  padding: 0.75rem;
+}
+
+.experiment-table .task-cell,
+.experiment-table .time-cell,
+.experiment-table .task-header,
+.experiment-table .time-header {
+  padding: 0.4rem 0.15rem;
+}
+
+.experiment-table .task-cell,
+.experiment-table .task-header {
+  width: 100px;
+  max-width: 100px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.experiment-table .time-cell,
+.experiment-table .time-header {
+  width: 70px;
+  max-width: 70px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.experiment-table .video-cell {
+  padding: 0.5rem;
+  vertical-align: top;
+}
+
+.experiment-table .video-cell .video-caption {
+  min-height: 3.4em;
+  margin-bottom: 0.4rem;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.experiment-table thead th {
+  text-align: center !important;
+  vertical-align: middle;
+  font-weight: 600;
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb !important;
+}
+
+.experiment-table .task-cell {
+  vertical-align: middle;
+  text-align: left;
+  font-weight: 600;
+}
+
+.experiment-table .time-cell {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.experiment-table .empty-cell {
+  vertical-align: middle;
+  text-align: center;
+  color: #b5b5b5;
+}
