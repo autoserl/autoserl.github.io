@@ -139,7 +139,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           Learning effective robot control policies on physical hardware is challenging due to costly data collection and the difficulty of reward specification. Prior work has incorporated demonstrations into reinforcement learning (RL), yet existing approaches either require large numbers of demonstrations or depend on continuous human intervention during training. To address these limitations, we present <i>AutoSERL</I>, a framework that leverages a single demonstration to fully automate the intervention process in real-world robot RL. 
-            The framework includes three complementary mechanisms to accomplish certain tasks: a <i>sliding window intervention mechanism</I> that continuously guides exploration to prevent local optima and unsafe deviations, a <i>safety recovery mechanism</I> that detects and corrects failure states via predefined trajectory recovery points, and an <i>intervention termination</I> criterion that automatically disables guidance once the policy can independently complete the task, preserving its exploration advantage.
+            The framework includes three complementary mechanisms to accomplish certain tasks: a <i>sliding window intervention</I> mechanism that continuously guides exploration to prevent local optima and unsafe deviations, a <i>safety recovery mechanism</I> that detects and corrects failure states via predefined trajectory recovery points, and an <i>intervention termination</I> criterion that automatically disables guidance once the policy can independently complete the task, preserving its exploration advantage.
             We evaluate AutoSERL on six contact-intensive manipulation tasks across two robot platforms, spanning insertion, hanging, and hinge-based tasks. AutoSERL consistently outperforms SERL initialized with 20 demonstrations, behavior cloning, and MILES — a dedicated one-shot imitation learning baseline — across all tasks while matching HIL-SERL, achieves 100% success rate on insertion tasks, and demonstrates improved robustness to positional variations, all from a single demonstration.
         </div>
       </div>
@@ -619,7 +619,7 @@ demonstrating improved robustness to positional variations.
             To evaluate the contribution of each component in AutoSERL, we conduct three
             ablation studies: (1) No sliding window intervention: the sliding window intervention mechanism is removed, and no intervention points are used to guide the
             robot during training. (2) No recovery mechanism: the safety recovery mechanism is removed, and when the robot encounters failure states, it must rely
-            solely on its own exploration to recover. (3) No intervention termination: the intervention termination mechanism is removed, and the intervention continuously
+            solely on its own exploration to recover. (3) No intervention termination: the intervention termination criterion is removed, and the intervention continuously
             supervises the training process until the end.
             <br>
             Ablation results show that the sliding window intervention, recovery mechanism, and intervention termination are all essential to AutoSERL's performance, as removing any of them degrades learning efficiency or success rates.
@@ -713,7 +713,7 @@ demonstrating improved robustness to positional variations.
         <h2 class="title is-3">Conclusion</h2>
         <div class="content has-text-justified">
           <p>
-            We propose AutoSERL, a real-world RL method that enables training through automatic intervention using only a single demonstration trajectory. AutoSERL incorporates sliding window intervention, safety recovery intervention, and intervention termination to ensure safe and stable real-world reinforcement learning.
+            We propose AutoSERL, a real-world RL method that enables training through automatic intervention using only a single demonstration trajectory. AutoSERL incorporates sliding window intervention, safety recovery, and intervention termination to ensure safe and stable real-world reinforcement learning.
 AutoSERL outperforms multi-demonstration RL, behavior cloning, and one-shot imitation learning baselines across six contact-intensive tasks spanning three task categories while matching HIL-SERL.
 We hope this work will inspire future research on automated real-world robotic RL and enable its extension to tasks with more diverse failure modes and higher-dimensional action spaces.
           </p>
